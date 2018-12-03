@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="New Field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="New Field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="New Integer 3" max_length="40" name="u_new_integer_3" type="integer"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="not started" label="Stage" max_length="40" name="u_stage" type="string">
+            <choice>
+                <element label="Initiated" sequence="0" value="initiated"/>
+                <element label="In Progress" sequence="1" value="in progress"/>
+                <element label="Completed" sequence="2" value="completed"/>
+                <element label="Rejected" sequence="3" value="rejected"/>
+                <element label="Cancelled" sequence="4" value="cancelled"/>
+                <element label="Not Started" sequence="5" value="not started"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
